@@ -202,7 +202,6 @@ h1,h2{
   display: flex;
   top: 2107px;
   left: 0;
-  width: 100%;
   height: 935px;
 }
 .aboutDescription{
@@ -212,6 +211,7 @@ h1,h2{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 50%;
   p{
     text-align: center;
     font-size: 30px;
@@ -226,4 +226,11 @@ h1,h2{
 .signature{
   display: flex;
   align-self: end;
+}
+
+.people{
+  img{
+    width: 100%;
+    height: 935px;
+  }
 }

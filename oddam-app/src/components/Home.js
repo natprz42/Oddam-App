@@ -12,9 +12,8 @@ import LogIn from "./LogIn";
 const Home = () => {
     return (
         <>
-            <h1>JOme</h1>
             <HomeHeader/>
-
+            <HomeThreeColumns/>
         </>
     );
 };

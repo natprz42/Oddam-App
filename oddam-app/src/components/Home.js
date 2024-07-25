@@ -15,6 +15,7 @@ const Home = () => {
             <HomeHeader/>
             <HomeThreeColumns/>
             <Description/>
+            <About/>
         </>
     );
 };

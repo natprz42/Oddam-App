@@ -9,7 +9,7 @@ import Icon4 from "../assets/Icon4.png"
 const Description = () => {
     return (
         <div>
-            <div className="description">
+            <div className="description" id="/description">
                 <div>
                     <h1 id="fourSteps">Wystarczą 4 proste kroki</h1>
                     <img className="decoration2" src={Decoration} alt={"decoration"}/>

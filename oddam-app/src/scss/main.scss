@@ -113,7 +113,7 @@ h1,h2{
   display: flex;
   justify-content: space-between;
   top: 964px;
-  left: 0px;
+  left: 0;
   width: 1900px;
   height: 384px;
   background: transparent url('../assets/ColumnsBackground.png') 0% 0% no-repeat padding-box;
@@ -136,4 +136,54 @@ h1,h2{
     flex-direction: column;
     justify-content: space-between;
   }
+}
+
+/** 4 SIMPLE STEPS */
+
+#fourSteps{
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+
+.description{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 1403px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: -0.76px;
+}
+.fourSteps{
+  background-color: $color_body_second;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 73px 414px 62px 414px;
+  .firstStep, .secondStep, .thirdStep, .fourthStep{
+    width: 150px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    h2{
+      font-size: 18px;
+    }
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 35px 0 80px 0;
+}
+.line{
+  content: "";
+  background-color: $color_font;
+  width: 100px;
+  height: 1px;
+  align-content: center;
+  margin: 5px 0 5px 0;
 }

@@ -1,3 +1,103 @@
 @import "reset";
 @import "settings/fonts";
 @import "settings/colors";
+*{
+  box-sizing: border-box;
+}
+
+.login {
+  text-align: right;
+  position: fixed;
+  width: 90%;
+  display: inline-block;
+  top: 46px;
+}
+
+.btn1 {
+  font-size: 13px;
+  padding: 5px;
+  color: $color_font_login;
+  background-color: #FFFFFF;
+  border: none;
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    border: 1px solid $color_banner;
+  }
+}
+
+/** NAVIGATION BAR */
+.navBar {
+  overflow: hidden;
+  position: fixed;
+  top: 90px;
+  width: 90%;
+  display: inline-block;
+  font-size: 18px;
+  color: $color_font;
+  text-align: right;
+  ul {
+    text-align: right;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+        padding: 5px;
+        margin-left: 35px;
+        &:hover {
+          border: 1px solid $color_black;
+        }
+      }
+    }
+  }
+}
+
+.heroImage{
+  position: absolute;
+  top: 0;
+  left: -483px;
+  width: 1368px;
+  height: 963px;
+  background: transparent;
+  z-index: -1;
+}
+
+.homePage{
+  position: absolute;
+  top: 342px;
+  left: 951px;
+  width: 674px;
+  height: 350px;
+  text-align: center;
+  font-size: 38px;
+  color: $color_font;
+  letter-spacing: -0.76px;
+}
+
+.decoration{
+  top: 474px;
+  left: 1164px;
+  width: 253px;
+  height: 33px;
+}
+
+.buttonSection{
+  display: flex;
+  column-gap: 40px;
+  margin-top: 40px;
+}
+.btn2 {
+  font-size: 36px;
+  color: $color_font_login;
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 310px;
+  border: 0.75px solid $color_font;
+  padding: 13px 51px;
+  a {
+    text-decoration: none;
+  }
+}

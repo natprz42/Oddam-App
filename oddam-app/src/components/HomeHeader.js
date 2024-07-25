@@ -36,10 +36,10 @@ const HomeHeader = () => {
             <img className="heroImage" src={HeroImage} alt={"decoration"}/>
             <div className="homePage">
                 <div className="slogan">
-                    <h1>Zacznij pomagać!</h1>
-                    <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
+                    <h1 className="slogan">Zacznij pomagać!</h1>
+                    <h1 className="slogan">Oddaj niechciane rzeczy w zaufane ręce</h1>
                 </div>
-                <img className="decoration" src={Decoration} alt={"decoration"}/>
+                <img className="decoration1" src={Decoration} alt={"decoration"}/>
 
                 <div className="buttonSection">
                     <button className="btn2">

@@ -12,7 +12,7 @@ const Description = () => {
             <div className="description">
                 <div>
                     <h1 id="fourSteps">Wystarczą 4 proste kroki</h1>
-                    <img className="decoration" src={Decoration} alt={"decoration"}/>
+                    <img className="decoration2" src={Decoration} alt={"decoration"}/>
                 </div>
                 <div className="fourSteps">
                     <div className="firstStep">

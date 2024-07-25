@@ -11,7 +11,7 @@ const Description = () => {
         <div>
             <div className="description">
                 <div>
-                    <h1>Wystarczą 4 proste kroki</h1>
+                    <h1 id="fourSteps">Wystarczą 4 proste kroki</h1>
                     <img className="decoration" src={Decoration} alt={"decoration"}/>
                 </div>
                 <div className="fourSteps">
@@ -37,10 +37,10 @@ const Description = () => {
                         <img src={Icon4} alt={"Icon4"}/>
                         <h2>Zamów kuriera</h2>
                         <div className="line"></div>
-                        <p>kurier przyjedzie w dogodnym terminie</p>
+                        <p>kurier przyjedzie w dogodnym terminiels</p>
                     </div>
                 </div>
-                <button className="btn2">
+                <button className="btn2 center">
                     <Link to="/login">ODDAJ RZECZY</Link>
                 </button>
 

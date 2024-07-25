@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll'
+import { Link as RouterLink} from 'react-router-dom'
 import Decoration from '../assets/Decoration.png'
 import HeroImage from '../assets/HeroImage.png'
 const HomeHeader = () => {
@@ -44,10 +45,10 @@ const HomeHeader = () => {
 
                 <div className="buttonSection">
                     <button className="btn2">
-                        <Link to="/login">ODDAJ RZECZY</Link>
+                        <RouterLink to="/login">ODDAJ RZECZY</RouterLink>
                     </button>
                     <button className="btn2">
-                        <Link to="/login">ZORGANIZUJ ZBIÓRKĘ</Link>
+                        <RouterLink to="/login">ZORGANIZUJ ZBIÓRKĘ</RouterLink>
                     </button>
                 </div>
             </div>

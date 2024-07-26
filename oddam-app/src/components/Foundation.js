@@ -1,8 +1,5 @@
 import Decoration from "../assets/Decoration.png";
-import React, { useState, useEffect } from 'react';
-import ReactPaginate from 'react-paginate';
-import Pagination from "./Pagination";
-
+import React, { useState } from 'react';
 
 const posts = [
     {
@@ -63,20 +60,28 @@ const posts = [
 
 const Foundation = () => {
 
- /*   const [blogPosts, setBlogPosts] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(3);
+    const [current,setCurrent] = useState(1)
+    const [count,setCount] = useState(3)
+    const [activePg,setActivePg] =useState(1)
+
+    const last = current * count;
+    const first = last - count;
+
+    const values = posts.slice(first,last);
 
 
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+    const buttonCount = []
+    for(let i=1;i<=Math.ceil(posts.length/count);i++){
+        buttonCount.push(i)
+    }
 
-    const paginate = ({ selected }) => {
-        setCurrentPage(selected + 1);
-    };*/
+    const handleClick =(i)=>{
+        console.log(i)
+        setCurrent(i)
+        setActivePg(i)
+    }
 
-    const arrayDataItems = posts.map(post =>
+    const arrayDataItems = values.map((post) =>
         <div key={post.id} className="box">
             <div className="box1">
                 <div className="box2">
@@ -114,18 +119,16 @@ const Foundation = () => {
             </div>
 
             <div className="container">
-                <div className="boxy">
                     {arrayDataItems};
-                </div>{
-                /*<ReactPaginate
-                    onPageChange={paginate}
-                    pageCount={Math.ceil(blogPosts.length / postsPerPage)}
-                    containerClassName={'pagination'}
-                    pageLinkClassName={'page-number'}
-                    activeLinkClassName={'active'}/>*/
-            }
-            </div>
+                <div className="paginationBtn">
+                    {
+                    buttonCount.map((btn)=>
+                    <button key={btn} className={btn===activePg?"active":""} onClick={()=>handleClick(btn)}>{btn}</button>
+                    )
+                    }
+                </div>
 
+            </div>
         </div>
     );
 };

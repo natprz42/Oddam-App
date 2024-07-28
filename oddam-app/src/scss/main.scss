@@ -333,3 +333,111 @@ h1,h2{
     }
   }
 }
+
+/** CONTACT*/
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 80px;
+  top: 4054px;
+  width: 100%;
+  height: 1026px;
+}
+.contactTitle{
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  width: 100%;
+  align-items: center;
+  h1{
+    text-align: center;
+    font: normal normal normal 38px/55px $font-base;
+    color: $color_font;
+  }
+}
+.background{
+  position: absolute;
+  object-fit: fill;
+  opacity: 0.4;
+  z-index: -1;
+  width: 100%;
+  height: 1026px;
+}
+.sectionFooter{
+  display: flex;
+  flex-direction: column;
+  height: 1026px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.sectionFormFooter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15%;
+  width: 528px;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  p{
+    font: normal normal normal 18px/24px $font-base;
+    color: $color_font;
+  }
+}
+.logos{
+  img{
+    margin-left: 15px;
+  }
+}
+
+/** FORM*/
+
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font: normal normal 600 16px $font-base;
+  color: $color_font;
+  align-self: center;
+  width: 528px;
+  .btn2{
+    align-self: end;
+    font-size: 18px;
+    width: 30%;
+  }
+}
+
+.formSection1{
+  display: flex;
+}
+
+.formName, .formEmail, .formSection2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 100%;
+}
+
+input, textarea{
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 40px;
+  background-color: transparent;
+  font: normal normal normal 18px $color_font;
+  &::placeholder{
+    font: normal normal normal 18px $color_font;
+    color: $color_form;
+  }
+}

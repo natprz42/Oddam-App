@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-import Data from './Data'
+import React, { useState } from 'react';
 
-/*const posts = [
+const posts = [
     {
         id: 1,
         foundation: "Fundacja “Dbam o Zdrowie”",
@@ -56,45 +55,45 @@ import Data from './Data'
         aim: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
         description: "ubrania, meble, zabawki"
     },
-];*/
+];
+const FSection1 = () => {
+    const [current,setCurrent] = useState(1)
+    const [count,setCount] = useState(3)
+    const [activePg,setActivePg] =useState(1)
 
-const [current,setCurrent] = useState(1)
-const [count,setCount] = useState(3)
-const [activePg,setActivePg] =useState(1)
+    const last = current * count;
+    const first = last - count;
 
-const last = current * count;
-const first = last - count;
-
-const values = Data.slice(first,last);
+    const values = posts.slice(first,last);
 
 
-const buttonCount = []
-for(let i=1;i<=Math.ceil(Data.length/count);i++){
-    buttonCount.push(i)
-}
+    const buttonCount = []
+    for(let i=1;i<=Math.ceil(posts.length/count);i++){
+        buttonCount.push(i)
+    }
 
-const handleClick =(i)=>{
-    console.log(i)
-    setCurrent(i)
-    setActivePg(i)
-}
+    const handleClick =(i)=>{
+        console.log(i)
+        setCurrent(i)
+        setActivePg(i)
+    }
 
-const arrayDataItems = values.map((post) =>
-    <div key={post.id} className="box">
-        <div className="box1">
-            <div className="box2">
-                <h2>{post.foundation}</h2>
-                <p>{post.aim}</p>
+    const arrayDataItems = values.map((post) =>
+        <div key={post.id} className="box">
+            <div className="box1">
+                <div className="box2">
+                    <h2>{post.foundation}</h2>
+                    <p>{post.aim}</p>
+                </div>
+                <div className="box3">
+                    <p>{post.description}</p>
+                </div>
             </div>
-            <div className="box3">
-                <p>{post.description}</p>
+            <div className="box4">
             </div>
         </div>
-        <div className="box4">
-        </div>
-    </div>
-)
-const Pagination = ([title, Data]) => {
+    )
+
     return (
         <div>
             <div className="container">
@@ -106,10 +105,9 @@ const Pagination = ([title, Data]) => {
                         )
                     }
                 </div>
-
             </div>
         </div>
     );
 };
 
-export default Pagination;
+export default FSection1;

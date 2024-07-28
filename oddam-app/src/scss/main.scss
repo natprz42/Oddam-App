@@ -277,3 +277,59 @@ h1,h2{
   font-size:22px;
   color: $color_font;
 }
+
+.box{
+  width: 1344px;
+  margin-top: 60px;
+}
+.box1{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+  align-items: center;
+  color: $color_font;
+  margin-bottom: 40px;
+  h2{
+    font: normal normal 300 26px/31px $font-alt;
+    margin-bottom: 10px;
+  }
+  p{
+    font: normal normal 300 18px/22px $font-alt;
+  }
+}
+.box2 {
+  display: flex;
+  flex-direction: column;
+}
+.box3{
+  justify-content: center;
+}
+.box4
+{
+  width: 1344px;;
+  content: "";
+  background-color: $color_font;
+  height: 1px;
+}
+
+.active{
+  border: 1px solid #707070;
+}
+.paginationBtn{
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  button{
+    padding: 20px;
+    margin: 10px;
+    font-size: 24px;
+    color: $color_font_login;
+    background-color: white;
+    border: none;
+    &:hover{
+      border: 1px solid #707070;
+    }
+  }
+}

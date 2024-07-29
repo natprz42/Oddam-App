@@ -123,7 +123,7 @@ h1,h2{
   left: 0;
   width: 1900px;
   height: 384px;
-  background: transparent url('../assets/ColumnsBackground.png') 0% 0% no-repeat padding-box;
+  background: transparent url('../assets/ColumnsBackground.png')  no-repeat padding-box;
   padding: 46px 163px 86px 163px;
   column-gap: 286px;
   h1{
@@ -439,5 +439,51 @@ input, textarea{
   &::placeholder{
     font: normal normal normal 18px $color_font;
     color: $color_form;
+  }
+}
+
+/** LOGIN*/
+
+.loginMain{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.loginForm{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.backgroundLogin{
+  padding: 40px 67px 40px 67px;
+  background-color: $color_body_second;
+}
+
+.buttonLogin{
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  margin-top: 30px;
+  color: $color_font_login;
+  background-color: #FFFFFF;
+  border: none;
+  text-align: center;
+
+}
+
+.btn4{
+  font-size: 18px;
+  padding: 20px;
+  color: black;
+  background-color: #FFFFFF;
+  border: none;
+  &:hover{
+    border: 0.75px solid $color_font;
+  }
+  a {
+    text-decoration: none;
   }
 }

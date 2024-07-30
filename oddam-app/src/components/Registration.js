@@ -36,19 +36,35 @@ const Registration = () => {
                 email: "Wpisz poprawny adress email",
                 password: "Wpisz hasło",
             });
-            }
+            return;
+        }
+        if (!formInput.email){
+            setFormError({
+                ...inputError,
+                email: "Wpisz poprawny adress email",
+            });
+            return;
+        }
         if (formInput.confirmPassword !== formInput.password){
             setFormError({
                 ...inputError,
                 confirmPassword: "Hasła powinny być takie same"
             });
+            return;
         }
         if (!formInput.password){
             setFormError({
                 ...inputError,
                 password: "Hasło nie powinno być puste"
             });
+            return;
         }
+
+        setFormError(inputError);
+        setFormInput((prevState) => ({
+            ...prevState,
+            successMsg: "Konto zostało założone"
+        }));
     }
 
 
@@ -61,36 +77,36 @@ const Registration = () => {
                     <h1>Zaloguj się</h1>
                     <img className="decoration2" src={Decoration} alt={"decoration"}/>
                 </div>
-                <div className="backgroundLogin">
                     <form className="loginFrom" onSubmit={validateFormInput}>
-                        <div className="loginEmail formSection2">
-                            <label>Email</label>
-                            <input type="email" value={formInput.email}
+                        <div className="backgroundLogin">
+                            <div className="loginEmail formSection2">
+                                <label>Email</label>
+                                <input type="email" name="email" value={formInput.email}
                                    onChange={({target}) =>
                                        handleUserInput(target.name, target.value)}/>
-                            <p>{formError.email}</p>
+                                <p style = {{ color: "red", marginBottom: "20px"}}>{formError.email}</p>
+                            </div>
+                            <div className="loginPassword formSection2">
+                                <label>Hasło</label>
+                                <input type="password" name="password" value={formInput.password}
+                                   onChange={({target}) =>
+                                       handleUserInput(target.name, target.value)}/>
+                                <p style = {{ color: "red", marginBottom: "20px"}}>{formError.password}</p>
+                                <label>Powtórz hasło</label>
+                                <input type="password" name="confirmPassword" value={formInput.confirmPassword}
+                                   onChange={({target}) =>
+                                       handleUserInput(target.name, target.value)}/>
+                                <p style = {{ color: "red", marginBottom: "20px"}}>{formError.confirmPassword}</p>
+                                <p style = {{ color: "green"}}>{formInput.successMsg}</p>
+                            </div>
                         </div>
-                        <div className="loginPassword formSection2">
-                            <label>Hasło</label>
-                            <input type="password" value={formInput.password}
-                                   onChange={({target}) =>
-                                       handleUserInput(target.name, target.value)}/>
-                            <p>{formError.password}</p>
-                            <label>Powtórz hasło</label>
-                            <input type="password" value={formInput.confirmPassword}
-                                   onChange={({target}) =>
-                                       handleUserInput(target.name, target.value)}/>
-                            <p>{formError.confirmPassword}</p>
-                            <p>{formInput.successMsg}</p>
+                        <div className="buttonLogin">
+                            <button className="btn4">
+                                <RouterLink to="/login">Zaloguj</RouterLink>
+                            </button>
+                            <button type="submit" className="btn4">Załóż konto</button>
                         </div>
                     </form>
-                </div>
-                <div className="buttonLogin">
-                    <button className="btn4">
-                        <RouterLink to="/registration">Załóż konto</RouterLink>
-                    </button>
-                    <button type="submit" className="btn4">Zaloguj</button>
-                </div>
             </div>
         </div>
     );

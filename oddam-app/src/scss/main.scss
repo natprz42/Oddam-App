@@ -450,11 +450,16 @@ input, textarea{
   margin-top: 100px;
   align-items: center;
 }
-
+input{
+  margin-bottom: 20px;
+}
 .loginForm{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  p{
+    margin-bottom: 10px;
+  }
 
 }
 .backgroundLogin{

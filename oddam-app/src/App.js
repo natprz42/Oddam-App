@@ -15,10 +15,9 @@ import Registration from "./components/Registration";
 import HomeHeader from "./components/HomeHeader";
 import HomeThreeColumns from "./components/HomeThreeColumns";
 import Description from "./components/Description";
-import About from "./components/About";
-import Foundation from "./components/Foundation";
-import Contact from "./components/Contact";
 import './scss/main.scss'
+import Logout from "./components/Logout";
+import NotFound from "./components/NotFound";
 function App() {
   return (
       <>
@@ -27,7 +26,8 @@ function App() {
                   <Route path='/' element={<Home />} />
                   <Route path='/login' element={<LogIn />} />
                   <Route path='/registration' element={<Registration />} />
-                  <Route path='/description' element={<Description />} />
+                  <Route path='/logout' element={<Logout/>} />
+                  <Route path="*" element={<NotFound/>} />
               </Routes>
           </BrowserRouter>
 

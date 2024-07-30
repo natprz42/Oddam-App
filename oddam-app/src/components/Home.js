@@ -8,7 +8,7 @@ import About from "./About";
 import Foundation from "./Foundation";
 import Registration from "./Registration";
 import LogIn from "./LogIn";
-
+import Logout from "./Logout";
 const Home = () => {
     return (
         <>

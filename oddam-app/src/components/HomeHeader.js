@@ -7,23 +7,27 @@ import Navbar from "./Navbar";
 const HomeHeader = () => {
 
     return (
-        <div className="main" id="/">
+        <div id="/">
             <Navbar/>
-            <img className="heroImage" src={HeroImage} alt={"decoration"}/>
-            <div className="homePage">
-                <div className="slogan">
-                    <h1 className="slogan">Zacznij pomagać!</h1>
-                    <h1 className="slogan">Oddaj niechciane rzeczy w zaufane ręce</h1>
-                </div>
-                <img className="decoration1" src={Decoration} alt={"decoration"}/>
+            <div className="main">
+                <img className="heroImage" src={HeroImage} alt={"decoration"}/>
+                <div className="home">
+                    <div className="homePage">
+                        <div className="slogan">
+                            <h1 className="slogan">Zacznij pomagać!</h1>
+                            <h1 className="slogan">Oddaj niechciane rzeczy w zaufane ręce</h1>
+                        </div>
+                        <img className="decoration1" src={Decoration} alt={"decoration"}/>
 
-                <div className="buttonSection">
-                    <button className="btn2">
-                        <RouterLink to="/login">ODDAJ RZECZY</RouterLink>
-                    </button>
-                    <button className="btn2">
-                        <RouterLink to="/login">ZORGANIZUJ ZBIÓRKĘ</RouterLink>
-                    </button>
+                        <div className="buttonSection">
+                            <button className="btn2">
+                                <RouterLink to="/login">ODDAJ RZECZY</RouterLink>
+                            </button>
+                            <button className="btn2">
+                                <RouterLink to="/login">ZORGANIZUJ ZBIÓRKĘ</RouterLink>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
